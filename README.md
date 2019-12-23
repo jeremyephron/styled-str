@@ -1,14 +1,14 @@
 # styled-str
-StyledStr is a module for creating strings styled with ANSI escape sequences.
+styled-str is a package for creating strings styled with ANSI escape sequences.
 The motivation for writing this package was that many existing string-styling 
 modules do not implement logical string behavior, like properly formatting the 
 string, indexing, containment, all of which are useless if they don't ignore
 the styling.
 
-StyledStr ignores styling and acts on just its content for the following 
+The Styled object ignores styling and acts on just its content for the following 
 operations:
 
-For an example StyledStr `s = StyledStr('Hello!', fg='red', style='italic')`
+For an example Styled `s = Styled('Hello!', fg='red', style='italic')`
 
 - length, e.g. `len(s) => 6`
 - formatting, e.g. `f'{s:.3}' => 'Hel'`
@@ -18,9 +18,9 @@ For an example StyledStr `s = StyledStr('Hello!', fg='red', style='italic')`
 - containment, e.g. only characters of "Hello!" are True for `c in s`
  
 We would like to have a strings with the same content viewed as distinct though,
-and so StyledStr includes styling for the following operations:
+and so Styled includes styling for the following operations:
 
-For example StyledStrs `a = StyledStr('Hello!', fg='red'); b = StyledStr('Hello!', bg='blue')`
+For example Styled `a = Styled('Hello!', fg='red'); b = Styled('Hello!', bg='blue')`
 
 - equality, e.g. `a == b => False`
 - comparison, e.g. `a < b => True`
