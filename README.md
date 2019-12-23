@@ -10,27 +10,27 @@ operations:
 
 For an example StyledStr `s = StyledStr('Hello!', fg='red', style='italic')`
 
-    - length, e.g. `len(s) => 6`
-    - formatting, e.g. `f'{s:.3}' => 'Hel'`
-    - indexing, e.g. `s[1] => 'e'`
-    - iteration, e.g. `for c in s: => H, e, l, l, o, !`
-    - reversed, e.g. `for c in reversed(s): => !, o, l, l, e, H`
-    - containment, e.g. only characters of "Hello!" are True for `c in s`
+- length, e.g. `len(s) => 6`
+- formatting, e.g. `f'{s:.3}' => 'Hel'`
+- indexing, e.g. `s[1] => 'e'`
+- iteration, e.g. `for c in s: => H, e, l, l, o, !`
+- reversed, e.g. `for c in reversed(s): => !, o, l, l, e, H`
+- containment, e.g. only characters of "Hello!" are True for `c in s`
  
 We would like to have a strings with the same content viewed as distinct though,
 and so StyledStr includes styling for the following operations:
 
 For example StyledStrs `a = StyledStr('Hello!', fg='red'); b = StyledStr('Hello!', bg='blue')`
 
-    - equality, e.g. `a == b => False`
-    - comparison, e.g. `a < b => True`
-    - hashing, e.g. `hash(a)` not necessarily `hash(b)`
+- equality, e.g. `a == b => False`
+- comparison, e.g. `a < b => True`
+- hashing, e.g. `hash(a)` not necessarily `hash(b)`
 
 ## Installation
 
 Install using pip (Python3):
 
-```
+```bash
 pip3 install styled-str
 ```
 
@@ -38,7 +38,7 @@ pip3 install styled-str
 
 Import the module and create a string with your desired styles:
 
-```
+```python
 from styledstr import Styled
 
 s = Styled('Hello World!', fg='cyan', bg='white', style=['bold', 'underlined'])
