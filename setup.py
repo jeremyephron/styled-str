@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="styled-str",
-    version="0.0.2",
+    version="0.1.0",
     url="https://github.com/jeremyephron/styled-str",
     author="Jeremy Ephron",
     author_email="jeremyephron@gmail.com",
